@@ -1,0 +1,22 @@
+@import url("globalStyle.css");
+
+
+/* Main */
+#main {
+  background-color: #f8f8f8;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  padding: 0.8rem 0;
+}
+#main .container_ {
+  /* width: calc(100% - var(--sidebar-width) * 2); */
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+
+  padding: 1rem 2rem;
+}
