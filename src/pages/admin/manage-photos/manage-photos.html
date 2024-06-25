@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/1f91b0e9aa.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="manage-photos.css" />
+
+    <title>Manage photos</title>
+
+    <style></style>
+  </head>
+  <body>
+    <header id="header" class="px-0 px-md-5">
+      <div class="header_logo col-10 col-md-6">
+        <i
+          class="toggle fa-solid fa-bars d-block d-md-none mx-3 mt-1"
+          role="button"
+        ></i>
+        <h3>Fotobook</h3>
+        <div class="search_input col-6 col-md-10">
+          <input
+            type="text"
+            placeholder="Search Photo / Album"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div
+        class="auth col-2 col-md-4 d-flex align-items-center justify-content-evenly"
+      >
+        <div class="post_user_info">
+          <!-- <div class="default_avatar">
+            <span class="username_short">HN</span>
+          </div> -->
+
+          <div class="dropdown">
+            <div class="default_avatar">
+              <span class="username_short">HN</span>
+            </div>
+
+            <ul
+              class="dropdown-menu dropdown-menu-none dropdown-menu-lg-start d-md-none bg-light"
+              aria-labelledby="dropdownMenuButton1"
+            >
+              <li class="px-2">
+                <a
+                  class="d-block mx-0"
+                  href="#"
+                  style="color: var(--main_color)"
+                  >Profile</a
+                >
+              </li>
+              <li class="px-2">
+                <a
+                  class="d-block mx-0"
+                  href="#"
+                  style="color: var(--main_color)"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <span class="user_name d-none d-md-block">Hieu Nguyen</span>
+          <span
+            class="user_name d-block d-md-none dropdown-toggle"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            role="button"
+          >
+          </span>
+        </div>
+        <a href="login.php" class="d-none d-md-block">Login</a>
+      </div>
+    </header>
+
+    <main id="main" class="row m-0">
+      <!-- Sidebar -->
+      <div
+        class="sidebar d-none d-md-flex flex-column align-items-center col-2"
+      >
+        <ul class="d-flex flex-column align-items-start w-auto">
+          <li><a href="">Feeds</a></li>
+          <li><a href="">My Photos</a></li>
+        </ul>
+      </div>
+
+      <!-- Main content -->
+      <div class="container_ col-12 col-md-8 m-md-0 justify-content-none">
+        <div class="" style="width: 100%">
+          <button
+            type="button"
+            class="btn btn-success float-end display-block mb-3"
+          >
+            Add new photo
+          </button>
+          <hr style="width: 100%; border: 2px solid #555" />
+        </div>
+
+        <div
+          class="d-flex flex-wrap align-content-start"
+          style="gap: 1rem; min-height: 82%"
+        >
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+          <div
+            class="card bg-dark text-white border-0"
+            style="max-width: 250px; height: 250px"
+          >
+            <img
+              src="https://s3-alpha-sig.figma.com/img/5ab1/4214/5fd468f24c4621db4ce5a2043a07c7dc?Expires=1719792000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hih3-vUWxePo-yG4r9-2Ppeg5mHKaYpfmHf1LwF-2tYJcnJRbnlp9TT-MaBNMBpAgsDpI1d~iYgxQpww3vmKse-dUWdsMusYNW6tKUauub4KhNu9wyJiWfNoBpXgVXmkp6VF1JkYwRZGtISjxcL~0kSafLqlaV5Jitre0yetuYTOnTqY3QYOpuTk0tn48xND9VJWaETcZ7DjkZVPKU4C3o95Bvi6kVj3mwF5CXkbhHcwFjxOaAkv4NOpInG-pWW8XRL1ce~lyRKWTkbXj~vKOOyqwAEo2a0yhSouv3ghUl6C5nHj6GfVkNvp9xu67-eEAlxbLSMKPVbLTWBSGaQymw__"
+              class="card-img"
+              style="width: 100%; height: 100%; object-fit: cover"
+              alt="Stony Beach"
+            />
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center"
+              style="background-color: rgba(0, 0, 0, 0.3); height: 20%"
+            >
+              <p class="text-truncate m-0 pr-2">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+
+            <div
+              class="card-img-overlay d-flex align-items-center justify-content-center rounded-circle bg-white p-3"
+              style="
+                width: 0.5rem;
+                height: 0.5rem;
+                position: absolute;
+                top: 84%;
+                left: 84%;
+              "
+            >
+              <i class="fa fa-lock" style="color: black; font-size: 1.5rem"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-2"></div>
+    </main>
+
+    <script src="../../public/js/toggleSidebar.js"></script>
+  </body>
+</html>
