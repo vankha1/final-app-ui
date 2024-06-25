@@ -1,0 +1,97 @@
+@import url("../../public/css/globalStyle.css");
+@import url("../../public/css/header.css");
+@import url("../../public/css/sidebar.css");
+@import url("../../public/css/mainLayout.css");
+
+
+#main .container_ {
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.photo_container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.photo_container img {
+  width: 80%;
+  position: absolute;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo_container img:nth-child(1) {
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.photo_container img:nth-child(2) {
+  transform: rotate(5deg);
+  z-index: 2;
+}
+
+.photo_container img:nth-child(3) {
+  transform: rotate(0deg);
+  z-index: 3;
+}
+
+.custom_btn {
+  --r: 1.5rem; /* radius */
+  --b: 4px; /* border width */
+
+  background: linear-gradient(
+    to bottom,
+    rgb(254, 12, 12),
+    rgb(252, 157, 23)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  border-radius: var(--r);
+  height: 35px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  z-index: 0;
+  width: 120px;
+  border: none;
+}
+/* check lined question for the detail of the below code */
+.custom_btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: var(--b) solid transparent;
+  border-radius: var(--r);
+  background: inherit;
+  background-origin: border-box;
+  background-clip: border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+/**/
+.custom_btn:hover {
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+.custom_btn:hover::before {
+  -webkit-mask: none;
+}
